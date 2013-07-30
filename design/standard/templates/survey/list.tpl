@@ -4,7 +4,7 @@
 
 {* DESIGN: Header START *}<div class="box-header"><div class="box-tc"><div class="box-ml"><div class="box-mr"><div class="box-tl"><div class="box-tr">
 
-<h1 class="context-title">{"Survey list"|i18n('survey')}</h1>
+<h1 class="context-title">{"Form list"|i18n('survey')}</h1>
 
 {* DESIGN: Mainline *}<div class="header-mainline"></div>
 
@@ -19,7 +19,7 @@
     <th class="tight">{"Persistent"|i18n('survey')}</th>
     <th class="tight">{"Activity"|i18n('survey')}</th>
     <th class="tight">{"Answers"|i18n('survey')}</th>
-    <th class="tight">&nbsp;</th>
+    <th width="10%">&nbsp;</th>
 </tr>
 {section var=survey loop=$survey_list sequence=array('bglight','bgdark')}
     {let can_view=and( $survey.survey.enabled, $survey.survey.published, $survey.survey.valid )
@@ -28,7 +28,7 @@
          {set contentsurveyobject_id=$survey.info.contentobject_id}
          {set contentsurveyobject=fetch('content','object',hash('object_id',$contentsurveyobject_id))}
 <tr class="{$survey.sequence}">
-    <td class="survey-title"><img src="{$survey.info.contentobjectattribute_language_code|flag_icon}" alt="{$survey.info.name|wash(xhtml)}" />&nbsp;<a href={concat($contentsurveyobject.main_node.url_alias, '/(language)/', $survey.info.contentobjectattribute_language_code)|ezurl()}>{$contentsurveyobject.main_node.url_alias|ezurl(no)}</a></td>
+    <td class="survey-title"><img src="{$survey.info.contentobjectattribute_language_code|flag_icon}" alt="{$survey.info.name|wash(xhtml)}" />&nbsp;<a href={concat($contentsurveyobject.main_node.url_alias, '/(language)/', $survey.info.contentobjectattribute_language_code)|ezurl()}>{$contentsurveyobject.main_node.name|wash()}</a></td>
     <td>
     {switch match=$survey.survey.enabled}
       {case match=0}{"No"|i18n('survey')}{/case}
@@ -56,8 +56,8 @@
     {/let}
     </td>
     <td>
-  <a href={concat("/survey/result/", $survey.survey.contentobject_id, '/', $survey.survey.contentclassattribute_id, '/', $survey.survey.language_code)|ezurl()}><img src={"results.gif"|ezimage} border="0" title="{"Results"|i18n('survey')}" /></a>
-  </td>
+        <a class="button" href={concat("/survey/result_list/", $survey.survey.contentobject_id, '/', $survey.survey.contentclassattribute_id, '/', $survey.survey.language_code)|ezurl()}>{"View Responses"|i18n('survey')}</a>
+    </td>
 </tr>
 {/let}
 {/section}

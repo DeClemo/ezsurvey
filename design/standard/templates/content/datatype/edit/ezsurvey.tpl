@@ -139,7 +139,11 @@ function removeClass( element, className )
     <label><input type="checkbox" name="{$prefixAttribute}_ezsurvey_one_answer_{$attributeID}"{section show=$survey.one_answer|eq(1)} checked="checked"{/section} /> {'Only one answer allowed.'|i18n('survey')}</label>
     </div>
     <div class="element">
+    {if ezini('SurveySettings','AlwaysPersistent','ezsurvey.ini')|eq('enabled')}
+    <input type="hidden" name="{$prefixAttribute}_ezsurvey_persistent_{$attributeID}" value="1" />
+    {else}
     <label><input type="checkbox" name="{$prefixAttribute}_ezsurvey_persistent_{$attributeID}"{section show=$survey.persistent|eq(1)} checked="checked"{/section} /> {'Persistent user input. ( Users will be able to edit survey later. )'|i18n('survey')}</label>
+    {/if}
     </div>
     </div>
 

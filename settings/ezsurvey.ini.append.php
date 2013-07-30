@@ -44,4 +44,7 @@ PackageFileName=ezsurvey_2.0-1.0-1.ezpkg
 HeadlineUserName=Answer from
 ShowUserName=true
 
+[SurveySettings]
+AlwaysPersistent=enabled
+
 */ ?>

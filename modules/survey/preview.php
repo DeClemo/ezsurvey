@@ -56,6 +56,6 @@ $tpl->setVariable( 'survey', $survey );
 $Result = array();
 $Result['content'] = $tpl->fetch( 'design:survey/view.tpl' );
 $Result['path'] = array( array( 'url' => false,
-                                'text' => ezpI18n::tr( 'survey', 'Survey Preview' ) ) );
+                                'text' => ezpI18n::tr( 'survey', 'Form Preview' ) ) );
 
 ?>

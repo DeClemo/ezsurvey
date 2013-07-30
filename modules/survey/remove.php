@@ -63,9 +63,9 @@ else
     $Result = array();
     $Result['content'] = $tpl->fetch( 'design:survey/remove.tpl' );
     $Result['path'] = array( array( 'url' => '/survey/list',
-                                    'text' => ezpI18n::tr( 'survey', 'Survey' ) ),
+                                    'text' => ezpI18n::tr( 'survey', 'From List' ) ),
                              array( 'url' => false,
-                                    'text' => ezpI18n::tr( 'survey', 'Remove' ) ) );
+                                    'text' => ezpI18n::tr( 'survey', 'Remove Form' ) ) );
 }
 
 ?>

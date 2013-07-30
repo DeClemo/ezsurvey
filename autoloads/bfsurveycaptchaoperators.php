@@ -28,7 +28,7 @@ class BFSurveyCaptchaOperators
             case 'recaptcha_form':
             {   
     			//load library
-    			include_once( 'extension/bfsurveycaptcha/classes/bfrecaptchalib.php' );
+    			include_once( 'extension/ezsurvey/classes/bfrecaptchalib.php' );
     		
     			//get recatcha public key
     			$publicKey = '';

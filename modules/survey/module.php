@@ -35,7 +35,7 @@
 /*! \file module.php
  */
 
-$Module = array( 'name' => 'Survey',
+$Module = array( 'name' => 'Form Submissions',
                  'variable_params' => true );
 
 $ViewList = array();

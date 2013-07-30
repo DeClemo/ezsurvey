@@ -4,7 +4,7 @@
 
 {* DESIGN: Header START *}<div class="box-header"><div class="box-tc"><div class="box-ml"><div class="box-mr"><div class="box-tl"><div class="box-tr">
 {def $survey_object=fetch('content', 'object', hash('object_id', $contentobject_id))}
-<h1 class="context-title">{"Survey result overview"|i18n('survey')}</h1>
+<h1 class="context-title">{"Form submission overview"|i18n('survey')}</h1>
 
 {* DESIGN: Mainline *}<div class="header-mainline"></div>
 
@@ -15,7 +15,7 @@
 <div class="survey-submenu float-break tab-block">
 <ul class="tabs">
 <li class="first selected current"><a href={concat('/survey/result/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code)|ezurl}>{"Summary"|i18n('survey')}</a></li>
-<li class="middle"><a href={concat('/survey/result_list/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code)|ezurl}>{"All evaluations"|i18n('survey')}</a></li>
+<li class="middle"><a href={concat('/survey/result_list/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code)|ezurl}>{"All Responses"|i18n('survey')}</a></li>
 </ul>
 </div>
 <div class="tab-content selected">

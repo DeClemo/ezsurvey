@@ -21,8 +21,8 @@
 <li class="current selected"><a href={concat('/survey/result_list/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code)|ezurl}>{"All evaluations"|i18n('survey')}</a></li>
 </ul>
 </div>
-<div class="tab-content selected">
-<div class="block"><p>{"Survey"i18n('survey')} <a href={$survey_object.main_node.url_alias|ezurl()}>{$survey_object.name|wash(xhtml)}</a> {"has %count answers."|i18n('survey',,hash('%count', $survey.result_count))}</p></div>
+{*<div class="tab-content selected">*}
+<div class="block"><p>{"Form"i18n('survey')} <a href={$survey_object.main_node.url_alias|ezurl()}>{$survey_object.name|wash(xhtml)}</a> {"has %count replies."|i18n('survey',,hash('%count', $survey.result_count))}</p></div>
 {/let}
 
 <table class="list" cellspacing="0">
@@ -63,7 +63,8 @@
 {/let}
 {/foreach}
 </table>
-</div>
+
+{*</div>*}
 {include name=navigator
          uri='design:navigator/google.tpl'
 	 page_uri=concat('/survey/result_list/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code )
