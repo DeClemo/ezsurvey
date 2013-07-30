@@ -1,0 +1,1 @@
+{* Captcha doesn't produce any output *}

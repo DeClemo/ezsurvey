@@ -47,6 +47,11 @@ $eZTemplateFunctionArray[] = array( 'function' => 'eZSurveyForwardInit',
                                     'function_names' => array( 'survey_question_edit_gui',
                                                                'survey_question_view_gui',
                                                                'survey_question_result_gui' ) );
+                                                               
+$eZTemplateOperatorArray[] = array( 'script' => 'extension/bfsurveycaptcha/autoloads/bfsurveycaptchaoperators.php',
+                                    'class' => 'BFSurveyCaptchaOperators',
+                                    'operator_names' => array( 'recaptcha_form' )
+);
 
 if ( !function_exists( 'eZSurveyForwardInit' ) )
 {

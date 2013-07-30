@@ -25,6 +25,9 @@ QuestionTypeList[]=emailentry
 QuestionTypeList[]=relatedobject
 QuestionTypeList[]=receiver
 QuestionTypeList[]=feedbackfield
+QuestionTypeList[]=date
+QuestionTypeList[]=captcha
+
 
 # Example group of a custom survey attribute in the extension custom
 # Will be availlable in:
